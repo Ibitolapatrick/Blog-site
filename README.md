@@ -22,4 +22,4 @@ node index.js
 This was my first full-stack project — It took me 3 weeks of wrestling with data flow between EJS and Express, debugging routing logic, 
 and figuring out index-based CRUD to get it to this state. This is the hardest project I've done so far but it has been super rewarding to finish and to see the final outcome.
 
-![App screenshot](screenshots/after.png)
+![App screenshot](/front-page.png)
