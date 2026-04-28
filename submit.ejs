@@ -1,0 +1,58 @@
+<%- include("partials/header.ejs") %>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <h1 class="success">Success!</h1>
+
+        <h3 class="title">
+            <%=(locals.postTitle)%>
+        </h3>
+        <p>
+            <%=(locals.actualPost)%>
+        </p>
+
+        <h3 class="create">Create another one?</h3>
+
+        <main class="create-another w-100 m-auto">
+            <form action="/new-post" method="post">
+                <div class="form-floating"> <input type="text" name="title-post2" class="form-control"
+                        id="floatingInput" placeholder="Title"> <label for="floatingInput">Title</label> </div>
+                <div class="form-floating"> <input type="text" name="post2" class="form-control" id="floatingPassword"
+                        placeholder="Write here:"> <label for="floatingPassword">Post</label> </div>
+                <button class="btn btn-primary w-100 py-2" type="submit">Post it!</button>
+            </form>
+
+        </main>
+        <main class="form-signin w-100 m-auto">
+            <form class="check-posts" action="/my-posts" method="get">
+                <button class="check-posts btn-primary w-100 py-2" type="submit">Check you posts</button>
+            </form>
+        </main>
+        <!-- <form action="/new-post" method="post">
+    <input type="text" name="title-post2" placeholder="Title">
+    <input type="text" name="post2" placeholder="Write here:">
+    <input type="submit" value="Post it!">
+</form> -->
+
+
+
+    </body>
+<%- include("partials/footer.ejs") %>

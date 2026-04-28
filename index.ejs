@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+    </body>
+
+    </html>
+
+    <h1 class="title">Welcome to YourBlog!</h1>
+    <p>This is a safe space for you where you can express yourself withouth guilt and release anything that has been bothering you.</p>
+    <!-- <h3>locals.posts[0].posttitle</h3> -->
+    <main class="form-signin w-100 m-auto"> 
+        <form action="/submit" method="post">
+            <h1 class="h3 mb-3 fw-normal">Write your first post:</h1>
+            <div class="form-floating"> <input type="text" name="title-post" class="form-control" id="floatingInput"
+                    placeholder="Title"> <label for="floatingInput">Title</label> </div>
+            <div class="form-floating"> <input type="text" name="personPost" class="form-control" id="floatingPassword"
+                    placeholder="Post"> <label for="floatingPassword">Post</label> </div>
+            <button class="btn btn-primary w-100 py-2" type="submit">Post it!</button>
+        </form>
+    </main>
+
+
+<%- include("partials/footer.ejs") %>
